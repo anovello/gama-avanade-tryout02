@@ -1,0 +1,318 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center
+}
+
+.calendar{
+    width: 600px;
+    height: 350px;
+}
+
+.event{
+	background-color: #890a78;
+	width: 230px;
+	height: 350px;
+	float: left;
+    position: relative;
+    border-radius: 10px 0 0 10px;
+
+}
+
+.date{
+	background-color: #fff;
+	width: 370px;
+	height: 350px;
+	float: left;
+    position: relative;
+    border-radius: 0 10px 10px 0;
+}
+
+.day-event{
+	color: #fff;
+	font-size: 100px;
+	font-weight: bold;
+	width: 100%;
+    text-align: center;
+	padding-top: 39px;
+	display: block;
+	letter-spacing: -2.2px;
+}
+
+.day-week{
+	color: #fff;
+	font-size: 18px;
+	font-weight: bold;
+	width: 100%;
+    text-align: center;
+	margin-top: -8px;
+	display: block;
+	letter-spacing: -0.4px;
+}
+
+.current-event{
+	color: #fff;
+	font-size: 12px;
+	font-weight: bold;
+	width: 100%;
+	padding-top: 26px;
+	padding-left: 30px;
+	display: block;
+	letter-spacing: -0.3px;
+}
+
+ul{
+	width: 100%;
+	color: #f6f4f7;
+	font-size: 12px;
+	letter-spacing: -0.3px;
+	margin-top: 6px;
+	margin-left: 5px;
+	height: 60px;
+}
+
+.input-add-event{
+	width: 100%;
+	padding-left: 29px;
+	padding-right: 30px;
+}
+
+.input-add-event input{
+	background-color: #890a78;
+	width: 143px;
+	border: 0;
+	border-bottom: 2px solid #fff;
+	font: 'Roboto Medium Italic', arial;
+	font-size: 12px;
+	color: #fff;
+	padding-bottom: 5px;
+}
+
+::-webkit-input-placeholder {
+   color: #fff;
+   padding-bottom: 5px;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #fff; 
+   padding-bottom: 5px; 
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #fff;  
+   padding-bottom: 5px;
+}
+
+:-ms-input-placeholder {  
+   color: #fff; 
+}
+
+.input-add-event button{
+    background-color: #890a78;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    color: #fff;
+    padding-top: 3px;
+	margin-left: 5px;
+	cursor: pointer;
+}
+
+/* */
+.date-cont{
+    padding-top: 24px;
+    padding-right: 24px;
+    padding-bottom: 0px;
+    padding-left: 10px;
+}
+
+.menu{
+	float: right;
+}
+
+.menu button{
+	background-color: #fff;
+    border: 0px;
+    cursor: pointer;
+    color: #9b9b9b;
+    font-size: 12px;
+}
+
+.menu span {
+	color: #9b9b9b;
+	font-size: 12px;
+	font-weight: bold;
+	letter-spacing: -0.3px;
+}	
+
+hr {
+    display: inline-block;
+    width: 311px;
+    border: 1px solid #000000;
+    margin-top: 15px;
+    margin-bottom: 18px;
+    margin-left: 16px;
+}
+
+.week span {
+	width: 30px;
+	font-size: 12px;
+	font-weight: bold;
+	letter-spacing: -0.3px;
+}
+
+.box-day{
+	width: 30px;
+    position: relative;
+    float: left;
+    margin-left: 18px;
+    text-align: center;
+    margin-bottom: 7px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+.day span{
+	font-size: 12px;
+	letter-spacing: -0.3px;
+
+}
+
+.prev {
+	color: #9b9b9b;
+}
+
+.has-event::before {
+	background: #890a78;
+	content: '';
+	height: 5px;
+	position: absolute;
+	width: 5px;
+	border-radius: 50%;
+	left: 23px;
+	top: 6px;
+}
+
+.day-selected{
+	background-color: #890a78;
+	color: #fff;
+	border-radius: 50%;
+}
+
+.calendar__day{
+	cursor: pointer;
+}
+
+@media(max-width: 620px){
+	.calendar{
+	    width: 350px;
+	    height: 520px;
+	}
+
+	.event{
+	    background-color: #890a78;
+	    width: 100%;
+	    height: 170px;
+	    float: none;
+	    position: relative;
+	    border-radius: 10px 10px 0 0;
+	}
+
+	.day-event {
+	    padding-top: 10px;
+	    text-align: left;
+	    padding-left: 28px;
+	    position: relative;
+	    float: left;
+	    width: 116px;
+	}
+
+	.day-week {
+	    width: 116px;
+	    text-align: left;
+	    padding-left: 0px;
+	    float: left;
+	    position: relative;
+	    margin-top: 130px;
+	    margin-left: -110px;
+	}
+
+	.current-event{
+		width: 75px;
+		padding-top: 35px;
+		padding-left: 16px;
+		display: block;
+		position: relative;
+		float: left;
+	}
+
+	ul {
+	    width: 120px;
+	    margin-top: 6px;
+	    margin-left: -8px;
+	    float: left;
+	    position: relative;
+	}
+
+	.input-add-event{
+		float: left;
+		position: relative;
+	    width: 160px;
+	    padding-left: 16px;
+	    padding-right: 0px;
+	}
+
+	.input-add-event input {
+    	width: 155px;
+	}
+
+
+	.input-add-event button {
+	    border-radius: 50%;
+	    padding-top: 3px;
+	    margin-left: 5px;
+	    position: relative;
+	    float: right;
+	    margin-top: -35px;
+	    margin-right: 3px;
+	}
+
+
+	/**/
+	hr {
+	    width: 310px;
+	    margin-left: 0px;
+	}
+
+	.date-cont{
+	    padding-top: 23px;
+	    padding-right: 0px;
+	    padding-bottom: 0px;
+	    padding-left: 18px;
+	}
+
+	.date{
+		background-color: #fff;
+	    width: 350px;
+	    height: 350px;
+	    float: left;
+	    position: relative;
+	    border-radius: 0 0 10px 10px;
+	}
+
+	.menu {
+	    padding-right: 18px;
+	}
+
+	.box-day {
+	    margin-left: 0px;
+	    width: 45px;
+	}
+
+	.has-event::before {
+	    left: 29px;
+	}
+}

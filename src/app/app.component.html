@@ -1,1 +1,80 @@
-<h1>It Works!</h1>
+<div class="container">	
+	<div class="calendar">
+		<div class="event">
+			<div *ngIf="keys() > 0">
+				<span class="day-event">{{event.day}}</span>
+				<span class="day-week">{{event.week}}</span>
+
+				<span class="current-event">Current Events</span>
+
+				<ul>
+					<li *ngFor="let ev of event.event">{{ev}}</li>
+				</ul>
+
+				<div class="input-add-event">
+					<form [formGroup]="rForm" (ngSubmit)="addEvent(rForm.value)">
+
+						<input type="text" id="appointment-input" placeholder="Create on Event" formControlName="title">
+
+						<button type="submit" id="appointment-submit" [disabled]="!rForm.valid"><i class="fa fa-plus" aria-hidden="true"></i></button>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div class="date">
+			<div class="date-cont">
+
+				<div class="menu">
+					<button (click)="updateDate(false)"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>
+					<span>{{formatMonth()}}/{{formatYear()}}</span>
+					<button (click)="updateDate(true)"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+				</div>
+				
+				<hr/>
+
+				<div class="week">
+
+					<div class="box-day">
+						<span>SUN</span>
+					</div>
+
+					<div class="box-day">
+						<span>MON</span>
+					</div>
+
+					<div class="box-day">
+						<span>TUE</span>
+					</div>
+
+					<div class="box-day">
+						<span>WED</span>
+					</div>
+
+					<div class="box-day">
+						<span>THU</span>
+					</div>
+
+					<div class="box-day">
+						<span>FRI</span>
+					</div>
+
+					<div class="box-day">
+						<span>SAT</span>
+					</div>
+				</div>
+
+				
+				<div class="day">
+
+					<div class="box-day" *ngFor="let dt of data" 
+						[class.prev]="!dt.current"
+						[class.day-selected]="dt.current && (day === strToInt(dt.day))" >
+							<span class="calendar__day" [class.has-event]="dt.event" (click)="displayEvent(dt)">{{dt.day}}</span>
+				    </div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
